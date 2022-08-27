@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/weather.css" />
+    <title>Weather🌤App</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <!--Header start-->
+      <header>
+        <div class="row justify-content-md-center name-and-search">
+          <div class="col-6 nameapp">
+            <h1>Weather App</h1>
+          </div>
+          <div class="col-6 search">
+            <form class="row search" id="search-panel">
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="enter city..."
+                  autocomplete="off"
+                  id="search-city"
+                />
+              </div>
+              <div class="col-4">
+                <button type="submit" class="btn btn-dark">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <!--Header end-->
+      <main>
+        <!--Main content start-->
+        <div id="main-content">
+          <div class="row city justify-content-md-center">
+            <div class="col-lg-6 city">
+              <ul>
+                <li class="name"></li>
+                <li class="day">Last updated</li>
+                <li class="time"></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 temperature">
+              <ul>
+                <li>
+                  <div class="temp d-inline" id="bigTemp"></div>
+                  <div class="degrees d-inline">
+                    <a href="#" id="celsius">°C |</a>
+                    <a href="#" id="fahrenheit">°F</a>
+                  </div>
+                  <img
+                    src=""
+                    alt=""
+                    id="icon"
+                    class="main-emoji img-fluid"
+                    width="100"
+                  />
+                </li>
+                <li><div class="max-min" id="descriptonId"></div></li>
+                <li class="max-min">
+                  max
+                  <p class="temp" id="max"></p>
+                  <span id="celsius-fahrenheit">°C |</span>
+                  min
+                  <p class="temp" id="min"></p>
+                  <span id="celsius-fahrenheit">°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--Main content end-->
+        <!--Additional weather parameters-->
+        <div class="weather-forecast" id="forecast"></div>
+        <div id="additionalinfo">
+          <div class="row">
+            <div class="col-3">
+              <p class="addinfo">wind speed<br />m/s</p>
+              <p class="addinfo-numbers"><span id="windSpeed"></span></p>
+            </div>
+            <div class="col-3">
+              <p class="addinfo">sunrise<br />AM</p>
+              <p class="addinfo-numbers" id="sunrise"></p>
+            </div>
+            <div class="col-3">
+              <p class="addinfo">sunset<br />PM</p>
+              <p class="addinfo-numbers" id="sunset"></p>
+            </div>
+            <div class="col-3">
+              <p class="addinfo">humidity<br />%</p>
+              <p class="addinfo-numbers"><span id="humidity"></span></p>
+            </div>
+          </div>
+        </div>
+        <!--Additional weather parameters end-->
+        <div class="current_location">
+          <button id="home"><i class="fa-solid fa-house"></i></button>
+        </div>
+      </main>
+      <footer>
+        <p class="coder">
+          <a
+            href="https://github.com/basagan/vanilla-weather-app"
+            target="_blank"
+          >
+            Open-sourse code</a
+          >
+          by Tatiana Ochirova
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="src/weather.js"></script>
+  <script
+    src="https://kit.fontawesome.com/60cb1b5e2c.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
